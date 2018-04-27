@@ -1,3 +1,14 @@
+
+
+/* ---------------- VARIABLES EN LA RAÍZ ---------------- */
+
+
+:root {
+  --header: #7A82AB;
+  --sidebar: #F786AA;
+  --article: #D6F6DD;
+}
+
 body {
   background-color: #fefefe;
 }
@@ -6,65 +17,80 @@ div[class^="item"] {
   font-family: sans-serif;
   font-weight: 300;
   font-size: 19px;
-  color: #a3b4b7;
+  color: #fff;
   text-align: center;
   padding: 10px;
   border-radius: 3px;
   box-shadow: 0 1px 1px #efefef;
 }
 
+div[class="item-3"], div[class="item-4"],
+div[class="item-5"], div[class="item-6"] {
+  color: #7A82AB;
+}
+
+
+/* ---------------- GRID CONTENEDOR ---------------- */
+
+
 .container {
   display: grid;
   grid-gap: 10px;
-  grid-template-areas: /* 4 Columnas y 4 Rows en 993px hacia arriba */
+  grid-template-areas: /* 4 Columnas y 4 Filas/Rows en 993px hacia arriba */
     'header header header'
     'sidebar article-1 article-2'
     'sidebar article-3 article-4'
     'footer footer footer';
-  grid-template-columns: minmax(200px, 600px) minmax(200px, 1fr) minmax(200px, 1fr);
-  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-columns: minmax(200px, 600px) minmax(200px, 1fr) minmax(200px, 1fr); /* minmax= ancho minimo y ancho maximo */
+  grid-template-rows: 1fr 2fr 2fr 1fr; /* fr= fracciones del tamaño */
 }
+
+
+/* ---------------- ITEMS INDIVIDUALES ---------------- */
+
 
 .item-1 {
   grid-area: header;
-  background-color: #cde9f7;
+  background-color: var(--header); /* Nombre variable */
 }
 
 .item-2 {
   grid-area: sidebar;
-  background-color: #ffbebe;
+  background-color: var(--sidebar);
 }
 
 .item-3 {
   grid-area: article-1;
-  background-color: #fff6d0;
+  background-color: var(--article);
 }
 
 .item-4 {
   grid-area: article-2;
-  background-color: #fff6d0;
+  background-color: var(--article);
 }
 
 .item-5 {
   grid-area: article-3;
-  background-color: #fff6d0;
+  background-color: var(--article);
 }
 
 .item-6 {
   grid-area: article-4;
-  background-color: #fff6d0;
+  background-color: var(--article);
 }
 
 .item-7 {
   grid-area: footer;
-  background-color: #cde9f7;
+  background-color: var(--header);
 }
 
-/* ---------------- MOVIL ---------------- */
+
+/* ---------------- TABLET ---------------- */
+
 
 @media screen and (max-width: 992px) {
   .container {
-    grid-template-areas: /* 2 Columnas y 6 Rows en 992px hacia abajo */
+    grid-template-areas: /* 2 Columnas y 6 Filas/Rows en 992px hacia abajo */
       'header header'
       'sidebar article-1'
       'sidebar article-2'
@@ -76,9 +102,13 @@ div[class^="item"] {
   }
 }
 
+
+/* ---------------- MOVIL ---------------- */
+
+
 @media screen and (max-width: 768px) {
   .container {
-    grid-template-areas: /* 1 Columna y 7 Rows en 768px hacia abajo */
+    grid-template-areas: /* 1 Columna y 7 Filas/Rows en 768px hacia abajo */
       'header'
       'sidebar'
       'article-1'

@@ -108,7 +108,7 @@ div[class="item-5"], div[class="item-6"] {
 
 @media screen and (max-width: 576px) {
   .container {
-    grid-template-areas: /* 1 Columna y 7 Filas/Rows en 768px hacia abajo */
+    grid-template-areas: /* 1 Columna y 7 Filas/Rows en 576px hacia abajo */
       'header'
       'sidebar'
       'article-1'

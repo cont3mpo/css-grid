@@ -13,7 +13,8 @@ body {
   background-color: #fefefe;
 }
 
-div[class^="item"] {
+header, footer, aside,
+.art1, .art2, .art3, .art4 {
   font-family: sans-serif;
   font-weight: 300;
   font-size: 19px;
@@ -24,8 +25,7 @@ div[class^="item"] {
   box-shadow: 0 1px 1px #efefef;
 }
 
-div[class="item-3"], div[class="item-4"],
-div[class="item-5"], div[class="item-6"] {
+.art1, .art2, .art3, .art4 {
   color: #7A82AB;
 }
 
@@ -49,37 +49,37 @@ div[class="item-5"], div[class="item-6"] {
 /* ---------------- ITEMS INDIVIDUALES ---------------- */
 
 
-.item-1 {
+header {
   grid-area: header;
   background-color: var(--header); /* Nombre variable */
 }
 
-.item-2 {
+aside {
   grid-area: sidebar;
   background-color: var(--sidebar);
 }
 
-.item-3 {
+.art1 {
   grid-area: article-1;
   background-color: var(--article);
 }
 
-.item-4 {
+.art2 {
   grid-area: article-2;
   background-color: var(--article);
 }
 
-.item-5 {
+.art3 {
   grid-area: article-3;
   background-color: var(--article);
 }
 
-.item-6 {
+.art4 {
   grid-area: article-4;
   background-color: var(--article);
 }
 
-.item-7 {
+footer {
   grid-area: footer;
   background-color: var(--header);
 }
